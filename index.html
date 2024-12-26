@@ -77,16 +77,18 @@
         <h3>Listen Gurdwara Sahib Live</h3>
         <div class="audio-controls">
             <button class="play-button" id="playPauseButton">
-                <img id="playIcon" src="play.svg" alt="Icon description">
-                
-                <img id="pauseIcon" src="pause.svg" alt="Icon description" display: none;>
-                
+                <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+                    <path d="M8 5v14l11-7z" />
+                </svg>
+                <svg id="pauseIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" style="display: none;">
+                    <path d="M6 19h4V5H6zm8-14v14h4V5z" />
+                </svg>
             </button>
         </div>
-    </div> 
+    </div>
 
     <audio id="audioElement" style="display: none;">
-        <source src="https://s3.voscast.com:7409/stream" type="audio/mpeg">
+        <source src="   " type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
