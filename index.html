@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,8 +15,6 @@
         .banner {
             background-color: #ffffff;
             padding: 20px;
-            padding-bottom: 130px;
-
         }
 
         .banner img {
@@ -26,15 +23,13 @@
         }
 
         .audio-banner {
-            background-color: #EA8A1E; /* Orange banner color */
             padding: 20px 0;
             width: 100%; /* Full width */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
             text-align: center;
         }
 
         .audio-banner h3 {
-            color: #2b2757; /* White text color */
+            color: #2b2757; /* Text color */
             font-size: 24px;
             margin: 0 0 20px; /* Add spacing below text */
         }
@@ -56,7 +51,6 @@
             color: white;
             cursor: pointer;
             border-radius: 50%; /* Circular shape */
-            margin-right: 20px; /* Spacing between button and slider */
         }
 
         .play-button svg {
@@ -67,51 +61,20 @@
         .play-button:focus {
             outline: none;
         }
-
-        /*.volume-slider {
-            width: 200px;
-            height: 5px;
-            appearance: none;
-            background: #2b2757;
-            outline: none;
-            cursor: pointer;
-        }*/
-
-        /*.volume-slider::-webkit-slider-thumb {
-            appearance: none;
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            background: white;
-            cursor: pointer;
-        }
-
-        .volume-slider::-moz-range-thumb {
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            background: white;
-            cursor: pointer;
-        }
-
-        .volume-slider::-ms-thumb {
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            background: white;
-            cursor: pointer;*/
-        }
     </style>
 </head>
+
 <body>
     <!-- Banner -->
     <div class="banner">
         <img src="gsf_banner.png" alt="Gurdwara Sahib Fremont Banner">
+        <br><br><br>
+        <img src="gsf_home.png" alt="Gurdwara Sahib Home">
     </div>
 
-    <!-- Audio Player Banner -->
+    <!-- Audio Player Section -->
     <div class="audio-banner">
-        <h3>Play Live Gurbani</h3> <!-- Centrally aligned text -->
+        <h3>Listen Gurdwara Sahib Live</h3>
         <div class="audio-controls">
             <button class="play-button" id="playPauseButton">
                 <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
@@ -121,7 +84,6 @@
                     <path d="M6 19h4V5H6zm8-14v14h4V5z" />
                 </svg>
             </button>
-            <!-- <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.1" value="1"> -->
         </div>
     </div>
 
@@ -135,7 +97,6 @@
         const playPauseButton = document.getElementById('playPauseButton');
         const playIcon = document.getElementById('playIcon');
         const pauseIcon = document.getElementById('pauseIcon');
-        // const volumeSlider = document.getElementById('volumeSlider');
 
         // Play/Pause functionality
         playPauseButton.addEventListener('click', () => {
@@ -149,12 +110,6 @@
                 pauseIcon.style.display = 'none';
             }
         });
-
-        // Volume control
-        // volumeSlider.addEventListener('input', (event) => {
-        //     audioElement.volume = event.target.value;
-        // });
     </script>
 </body>
 </html>
-
