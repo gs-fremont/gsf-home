@@ -61,6 +61,39 @@
         .play-button:focus {
             outline: none;
         }
+
+        .donate-banner {
+            position: relative;
+            text-align: center;
+            max-width: 800px; /* Matches your gsf_home.webp container */
+            margin: 0 auto; /* Center horizontally */
+            aspect-ratio: 16 / 9; /* Matches gsf_home.webp aspect ratio */
+            overflow: hidden;
+        }
+
+        .donate-banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .donate-banner .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Center vertically and horizontally */
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better visibility */
+            padding: 20px;
+            color: white;
+        }
+
+        .donate-banner h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        
     </style>
 </head>
 
@@ -85,6 +118,20 @@
             </button>
         </div>
     </div>
+
+    <!-- Donate Banner -->
+    <div class="donate-banner">
+        <img src="gsf_lafires.jpeg" alt="LA Fires">
+        <div class="overlay">
+            <h1>Donate Online For LA Fires Humanitarian Efforts</h1>
+            <form action="https://www.paypal.com/donate" method="post" target="_top">
+                <input type="hidden" name="campaign_id" value="3HP9RE7GBAD8A" />
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="Donate" />
+            </form>
+        </div>
+    </div>
+
+
 
     <audio id="audioElement" preload="none" style="display: none;">
         <source src="https://s3.voscast.com:7409/stream" type="audio/mpeg">
