@@ -4,132 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gurdwara Sahib Fremont</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            text-align: center;
-        }
-
-        .banner {
-            background-color: #ffffff;
-            /*padding: 20px;*/
-        }
-
-        .banner img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .audio-banner {
-            padding: 20px 0;
-            /*width: 100%; /* Full width */
-            text-align: center;
-        }
-
-        .audio-container {
-            display: inline-flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #2b2757; /* Dark purple logo color */
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-            width: 300px;
-        }
-
-        .audio-container h3 {
-            color: #f9f9f9; /* Light text color */
-            font-size: 18px;
-            margin: 0 0 10px;
-            text-align: center;
-        }
-
-        /* .audio-banner h3 {
-            color: #2b2757; 
-            font-size: 24px;
-            margin: 0 0 20px; 
-        } */
-
-        .audio-controls {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .play-button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 60px; /* Circular size */
-            height: 60px;
-            /*background-color: #2b2757; /* Button color */
-            background-color: #EA8A1E;
-            border: none;
-            color: white;
-            cursor: pointer;
-            border-radius: 50%; /* Circular shape */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Button shadow */
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .play-button:hover {
-            transform: scale(1.1); /* Slight enlargement on hover */
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
-        }
-
-        .play-button svg {
-            width: 20px;
-            height: 20px;
-        }
-
-        .play-button:focus {
-            outline: none;
-        }
-
-        .donate-banner {
-            position: relative;
-            text-align: center;
-            max-width: 800px; /* Matches your gsf_home.webp container */
-            margin: 0 auto 50px; /* Center horizontally */
-            aspect-ratio: 16 / 9; /* Matches gsf_home.webp aspect ratio */
-            overflow: hidden;
-        }
-
-        .donate-banner img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .donate-banner .overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%); /* Center vertically and horizontally */
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better visibility */
-            padding: 20px;
-            min-width: 400px;
-            color: white;
-
-            border-radius: 8px; /* Optional: Rounded corners */
-        }
-
-        .donate-banner h1 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        iframe {
-        width: 100%;
-        height: 50vh; /* Full viewport height */
-        border: none; /* Remove border */
-        }
-
-        
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -153,6 +28,7 @@
             </button>
         </div>
     </div>
+
     <!--
     <div class="audio-banner">
         <h3>Listen Gurdwara Sahib Live</h3>
@@ -166,7 +42,8 @@
                 </svg>
             </button>
         </div>
-    </div> -->
+    </div> 
+    -->
 
     <!-- Donate Banner -->
     <div class="donate-banner">
@@ -191,31 +68,9 @@
         </iframe>   
     </div>
 
-
-
     <audio id="audioElement" preload="none" style="display: none;">
         <source src="https://s3.voscast.com:7409/stream" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-
-    <script>
-        const audioElement = document.getElementById('audioElement');
-        const playPauseButton = document.getElementById('playPauseButton');
-        const playIcon = document.getElementById('playIcon');
-        const pauseIcon = document.getElementById('pauseIcon');
-
-        // Play/Pause functionality
-        playPauseButton.addEventListener('click', () => {
-            if (audioElement.paused) {
-                audioElement.play();
-                playIcon.style.display = 'none';
-                pauseIcon.style.display = 'block';
-            } else {
-                audioElement.pause();
-                playIcon.style.display = 'block';
-                pauseIcon.style.display = 'none';
-            }
-        });
-    </script>
 </body>
 </html>
