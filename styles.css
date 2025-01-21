@@ -119,3 +119,11 @@ iframe {
     height: 50vh;
     border: none;
 }
+
+.poster-heading {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0 10px;
+    color: #2b2757; /* Matching the color scheme */
+    text-align: center;
+}
